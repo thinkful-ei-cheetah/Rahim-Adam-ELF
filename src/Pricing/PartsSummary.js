@@ -1,7 +1,5 @@
 import React from 'react';
 
 export default function PartsSummary(props) {
-    return (
-        <div>{props.summary}</div>
-    )
+  return <div>{props.partSummary}</div>;
 }

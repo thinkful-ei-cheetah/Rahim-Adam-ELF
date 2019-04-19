@@ -1,4 +1,5 @@
 import React from 'react';
+import TechSpecChoices from './TechSpecChoices';
 
 export default function TechSpecs(props) {
   const features = Object.keys(props.features).map(key => {
@@ -7,19 +8,14 @@ export default function TechSpecs(props) {
         item.name === props.selected[key].name ? 'feature__selected' : '';
       const featureClass = 'feature__option ' + selectedClass;
       return (
-        <li key={index} className='feature__item'>
-          <div
-            className={featureClass}
-            onClick={e => props.updateFeature(key, item)}
-          >
-            {item.name}(
-            {new Intl.NumberFormat('en-US', {
-              style: 'currency',
-              currency: 'USD'
-            }).format(item.cost)}
-            )
-          </div>
-        </li>
+        <TechSpecChoices
+          key={index}
+          id={index}
+          tracker={key}
+          addClass={featureClass}
+          updateFeature={props.updateFeature}
+          item={item}
+        />
       );
     });
 

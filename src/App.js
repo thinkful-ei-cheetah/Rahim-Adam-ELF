@@ -44,7 +44,7 @@ class App extends Component {
           <h3>Laptops</h3>
           <h5>Customize your laptop</h5>
         </header>
-        https://github.com/thinkful-ei-cheetah/Rahim-Adam-ELF.git
+        <h2>https://github.com/thinkful-ei-cheetah/Rahim-Adam-ELF.git</h2>
         <main>
           <TechSpecs
             features={this.props.features}
